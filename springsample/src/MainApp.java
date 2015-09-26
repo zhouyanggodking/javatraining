@@ -11,6 +11,7 @@ public class MainApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		Person p = (Person) context.getBean("godking");
 		System.out.println(p.getName());
+		System.out.println(p.getTitle());
 	}
 
 }
