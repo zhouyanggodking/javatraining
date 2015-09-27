@@ -21,4 +21,13 @@ public class Person {
 	public String getTitle(){
 		return this.title;
 	}
+	
+	//bean life cycle
+	public void init(){
+		System.out.println("Person(" + this.name +"," + this.title+") created");		
+	}
+	
+	public void destroy(){
+		System.out.println("Person(" + this.name +"," + this.title+") destroyed");	
+	}
 }

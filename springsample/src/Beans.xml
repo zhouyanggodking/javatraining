@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="godking" class="springsample.Person">
+   <bean id="godking" class="springsample.Person" init-method="init" destroy-method="destroy">
        <!--<property name="name" value="GodKing"/> -->  <!-- for property injection -->
        <constructor-arg name="name" type="java.lang.String" value="GodKing"/> <!-- for constructor injection -->
    	   <constructor-arg name="title" type="java.lang.String" value="Engineer"></constructor-arg>
