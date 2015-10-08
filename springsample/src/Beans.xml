@@ -9,6 +9,11 @@
        <!--<property name="name" value="GodKing"/> -->  <!-- for property injection -->
        <constructor-arg name="name" type="java.lang.String" value="GodKing"/> <!-- for constructor injection -->
    	   <constructor-arg name="title" type="java.lang.String" value="Engineer"></constructor-arg>
+   	   <property name="address" ref="godkingAddress"/>
+   </bean>
+   <bean id="godkingAddress" class="springsample.Address">
+   	   <property name="postalCode" value="100026"/>
+   	   <property name="street" value="godking street"/>
    </bean>
    
    <bean id="initHelloworld" class="springsample.HelloWorldPostProcessor"/>

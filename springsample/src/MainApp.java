@@ -15,6 +15,7 @@ public class MainApp {
 		Person p = (Person) context.getBean("godking");
 		System.out.println(p.getName());
 		System.out.println(p.getTitle());
+		System.out.println(p.getAddress());
 		//for destroy method in bean life cycle
 		context.registerShutdownHook();
 	}
