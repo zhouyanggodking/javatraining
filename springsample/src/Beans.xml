@@ -9,13 +9,49 @@
        <!--<property name="name" value="GodKing"/> -->  <!-- for property injection -->
        <constructor-arg name="name" type="java.lang.String" value="GodKing"/> <!-- for constructor injection -->
    	   <constructor-arg name="title" type="java.lang.String" value="Engineer"></constructor-arg>
-   	   <property name="address" ref="godkingAddress"/>
+   	   <!-- <property name="address" ref="godkingAddress"/> -->
+   	   <property name="address">
+   	       <bean id="godkingAddress" class="springsample.Address">
+   	           <property name="postalCode" value="100026"/>
+   	           <property name="street" value="godking street"/>
+   	       </bean>
+   	   </property>
    </bean>
-   <bean id="godkingAddress" class="springsample.Address">
+   <!-- <bean id="godkingAddress" class="springsample.Address">
    	   <property name="postalCode" value="100026"/>
    	   <property name="street" value="godking street"/>
-   </bean>
+   </bean> -->
    
    <bean id="initHelloworld" class="springsample.HelloWorldPostProcessor"/>
+   
+   <bean id="stringCollection" class="springsample.StringCollection">
+       <property name="strList">
+           <list>
+               <value>a</value>
+               <value>b</value>
+               <value>c</value>
+           </list>
+       </property>
+       <property name="strSet">
+           <set>
+               <value>godking</value>
+               <value>oceansky</value>
+           </set>
+       </property>
+       <property name="strMap">
+           <map>
+               <entry key="python" value="30"/>
+               <entry key="c++" value="40"/>
+               <entry key="java" value="10"/>
+           </map>
+       </property>
+       <property name="strProps">
+           <props>
+               <prop key="China">10</prop>
+               <prop key="Japan">30</prop>
+               <prop key="France">20</prop>
+           </props>
+       </property>
+   </bean>
 
 </beans>
