@@ -10,5 +10,7 @@
        <constructor-arg name="name" type="java.lang.String" value="GodKing"/> <!-- for constructor injection -->
    	   <constructor-arg name="title" type="java.lang.String" value="Engineer"></constructor-arg>
    </bean>
+   
+   <bean id="initHelloworld" class="springsample.HelloWorldPostProcessor"/>
 
 </beans>

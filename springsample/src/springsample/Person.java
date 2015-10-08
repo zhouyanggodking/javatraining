@@ -28,6 +28,6 @@ public class Person {
 	}
 	
 	public void destroy(){
-		System.out.println("Person(" + this.name +"," + this.title+") destroyed");	
+		System.out.println("Person(" + this.name +"," + this.title+") will be destroyed");	
 	}
 }
